@@ -16,7 +16,7 @@ const App: React.FC = () =>{
 
   const toggleTodos: ToggleTodo = selectedTodo =>{
     const newTodos = todos.map(todos =>{
-      if(todos == selectedTodo){
+      if(todos === selectedTodo){
          return {
            ...todos,
            complete: !todos.complete
