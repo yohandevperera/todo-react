@@ -1,5 +1,6 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import { AddTodo } from "./types";
+import {Button, Input} from 'antd';
 
 interface AddTodoFormPorps {
     addTodo: AddTodo;
@@ -12,16 +13,17 @@ export const AddTodoForm: React.FC<AddTodoFormPorps> = ({addTodo}) => {
         setNewTodo(e.target.value);
     };
 
+    
     const handleSubmit = (e: FormEvent<HTMLButtonElement>) => {
-        e.preventDefault();
-        addTodo(newTodo);
+    e.preventDefault();
+    addTodo(newTodo);
     };
-
+    
     return (
 
         <form>
-            <input  type="text" value={newTodo} onChange={handleChange}/>
-            <button type="submit" onClick={handleSubmit}>Add todo</button>
+            <Input placeholder="Enter the Task" allowClear type="text" value={newTodo} onChange={handleChange}/>
+            <Button type="primary" onClick={() => handleSubmit }>Add todo</Button>
         </form>
 
     );

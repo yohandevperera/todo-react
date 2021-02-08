@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './asserts/main.css'
+import 'antd/dist/antd.css';
 
 ReactDOM.render(
   <React.StrictMode>

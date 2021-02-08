@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AddTodoForm } from './AddTodoForm';
 import { TodoList } from './TodoList';
-import { TodoListItem } from './TodoListItem';
+// import { TodoListItem } from './TodoListItem';
 import { Todo, ToggleTodo, AddTodo } from './types';
 
 
@@ -33,9 +33,12 @@ const App: React.FC = () =>{
 
   return(
   <React.Fragment>
+  <div className="max-w-sm rounded overflow-hidden shadow-lg content-center">
   <TodoList todos = {todos} ToggleTodo ={toggleTodos}/>
   <AddTodoForm addTodo={addTodo}/>
+  </div>
   </React.Fragment>
+
   )
 }
 
